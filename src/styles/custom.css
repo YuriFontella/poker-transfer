@@ -1,0 +1,17 @@
+#nprogress .bar {
+  background: rgba(220, 38, 38);
+  height: 2px;
+}
+
+#nprogress .bar {
+  background: rgba(220, 38, 38);
+  height: 2px;
+}
+
+#nprogress .peg {
+  box-shadow: rgba(220, 38, 38);
+}
+
+#nprogress .spinner-icon {
+  border-color: rgba(220, 38, 38);
+}

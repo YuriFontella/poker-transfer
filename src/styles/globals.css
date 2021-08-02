@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~nprogress/nprogress.css';
+
+@import '@/src/styles/toast.css';
+
+@import '@/src/styles/custom.css';
