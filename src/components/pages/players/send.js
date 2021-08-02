@@ -48,7 +48,7 @@ const Send = ({ item }) => {
     transfer.from = parseInt(item.id)
     transfer.to = parseInt(transfer.to)
 
-    data.players = []
+    data.players = null
 
     newTransfer({ variables: { transfer } })
   }
