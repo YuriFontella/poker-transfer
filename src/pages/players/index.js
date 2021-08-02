@@ -22,12 +22,12 @@ const Players = () => {
 
   const [offset, setOffset] = useState(0)
 
-  const updateData = useCallback((prevData, nextData) => {
+  const updateData = (prevData, nextData) => {
     if (state.search) {
       return { players: [...nextData.players] }
     }
     return { players: [...prevData.players, ...nextData.players] }
-  }, [state])
+  }
 
   const { dispatch, state } = useStore()
 
