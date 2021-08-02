@@ -10,3 +10,12 @@ Recursos:
 ## DEMO
 
 [https://poker-transfer.vercel.app](https://poker-transfer.vercel.app)
+
+Usuários:
+
+```bash
+admin@poker.com
+```
+```bash
+user@poker.com
+```
