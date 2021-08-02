@@ -57,7 +57,7 @@ const Players = () => {
         <ul className="flex flex-col">
           <Loader
             source={players}
-            loading={loading}
+            loading={{ status: loading, color: 'white' }}
             component={(item, index) =>
               <Link href={redirect(item.id)} key={index}>
                 <a>

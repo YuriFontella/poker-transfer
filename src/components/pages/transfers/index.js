@@ -38,7 +38,7 @@ const Index = ({ query }) => {
       <Loader
         source={data?.player}
         spinner={spinner}
-        loading={loading}
+        loading={{ status: loading, color: 'white' }}
         component={(item) =>
           <div className="flex flex-col gap-1">
             <Payment item={item} />

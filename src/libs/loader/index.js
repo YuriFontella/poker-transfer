@@ -7,9 +7,9 @@ const Loader = ({ source, loading, component, blank, template, map = true, spinn
 
   const empty = typeof blank === 'boolean' ? blank : true
 
-  if (loading) {
+  if (loading?.status) {
     if (spinner)
-      return <Loading />
+      return <Loading color={loading?.color} />
   }
 
   if (source === undefined)

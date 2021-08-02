@@ -15,7 +15,7 @@ const Transfers = () => {
 
   const [index, setIndex] = useState()
 
-  const { data } = useQuery(TRANSFERS)
+  const { data, loading } = useQuery(TRANSFERS)
 
   const [removeTransfer, response] = useMutation(REMOVE_TRANSFER)
 
