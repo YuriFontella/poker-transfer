@@ -96,7 +96,7 @@ const Send = ({ item }) => {
                 <RadioGroup value={value} onChange={onChange}>
                   <Loader
                     source={data?.players}
-                    loading={{ status: loading, color: 'blue-700' }}
+                    loading={{ status: true, color: 'red-700' }}
                     blank={false}
                     component={(item, index) =>
                       <RadioGroup.Option value={item.id} key={index}>
