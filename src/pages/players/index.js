@@ -97,9 +97,9 @@ const Players = () => {
         </ul>
       </div>
 
-      {offset <= players?.length - 3 && (
+      {players?.length >= 3 && offset <= players?.length - 3 && (
         <div className="flex justify-center mt-1">
-          <button className="bg-blue-600 w-full p-2 rounded text-white text-xs" onClick={() => setOffset(players.length)}>
+          <button className="bg-gradient-to-r from-blue-700 to-blue-500 shadow p-2 rounded text-white text-xs" onClick={() => setOffset(players.length)}>
             Carregar mais
           </button>
         </div>
