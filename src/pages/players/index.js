@@ -15,6 +15,7 @@ import { PLAYERS } from "@/src/graphql/queries"
 import Loader from "@/src/libs/loader"
 
 import { UserIcon, CurrencyDollarIcon, PlusIcon } from "@heroicons/react/solid"
+
 import Empty from "@/src/components/helpers/empty"
 
 const Players = () => {
@@ -88,7 +89,7 @@ const Players = () => {
             }
             blank={false}
             template={() =>
-              <div className="bg-white rounded shadow pt-2 pb-6">
+              <div className="bg-white rounded shadow pt-2 pb-4">
                 <Empty />
               </div>
             }

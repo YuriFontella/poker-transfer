@@ -4,8 +4,6 @@ import Error from '@/src/components/layouts/404'
 
 import Private from '@/src/layouts/Private'
 
-import Loading from '@/src/components/libs/loading'
-
 import { graphQLClient } from '@/src/graphql/client'
 
 const Auth = ({ children }) => {
@@ -13,7 +11,7 @@ const Auth = ({ children }) => {
   const [session, loading] = useSession()
 
   if (loading)
-    return <Loading />
+    return null
 
   else if (!session)
     return <Error />
