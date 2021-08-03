@@ -13,7 +13,7 @@ const Auth = ({ children }) => {
   const [session, loading] = useSession()
 
   if (loading)
-    return <Loading color="blue-700" />
+    return <Loading color="blue" />
 
   else if (!session)
     return <Error />

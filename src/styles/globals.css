@@ -7,3 +7,13 @@
 @import '@/src/styles/toast.css';
 
 @import '@/src/styles/custom.css';
+
+@layer components {
+  .loading-blue {
+    @apply border-blue-700;
+  }
+
+  .loading-white {
+    @apply border-white;
+  }
+}
