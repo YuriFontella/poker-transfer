@@ -86,13 +86,13 @@ const Payments = ({ item }) => {
 
       <div className="p-6">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex gap-2 justify-between w-full">
+          <div className="flex flex-col md:flex-row gap-2 justify-between w-full">
             <div className="w-full">
               <label className="block text-xs font-medium text-gray-700">Valor</label>
               <input {...register('balance')} type="text" className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-xs border-blue-300 rounded-md" />
             </div>
 
-            <div className="flex items-end justify-end w-32">
+            <div className="flex items-end justify-end w-full md:w-32">
               <button
                 type="submit"
                 className="justify-center w-full py-2 px-3 border border-transparent text-xs font-semibold rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition active:bg-blue-400"

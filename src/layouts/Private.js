@@ -47,7 +47,7 @@ const Private = ({ children }) => {
               </ul>
             </div>
             <div className="flex flex-1 justify-end items-center gap-4">
-              <div>
+              <div className="hidden md:block">
                 <input type="text" className="h-7 appearance-none relative block w-44 p-2 border-none placeholder-gray-500 text-xs text-gray-800 rounded focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10" placeholder="Buscar" onChange={(e) => dispatch({ type: 'search', search: e.target.value })} />
               </div>
               <div>
@@ -60,7 +60,7 @@ const Private = ({ children }) => {
             <h1 className="text-white font-bold text-xl capitalize">{state.title}</h1>
           </div>
         </div>
-        <div className="px-6 -mt-14 pb-6">
+        <div className="px-2 md:px-6 -mt-14 pb-6">
           {children}
         </div>
       </div>
