@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import { useStore } from "@/src/contexts/store"
 
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import { useQuery } from 'graphql-hooks'
 
@@ -20,12 +20,9 @@ import Empty from "@/src/components/helpers/empty"
 
 const Players = () => {
 
-  const [offset, setOffset] = useState(0)
-  const [spinner, setSpinner] = useState(true)
+  const [more, setMore] = useState({ offset: 0, spinner: true })
 
   const updateData = (prevData, nextData) => {
-    setSpinner(false)
-
     if (state.search) {
       return { players: [...nextData.players] }
     }
@@ -40,7 +37,7 @@ const Players = () => {
     })
   }, [dispatch])
 
-  const variables = { limit: 3, offset: offset, name: state.search || '' }
+  const variables = { limit: 3, offset: more.offset, name: state.search || '' }
 
   const { data, loading } = useQuery(PLAYERS, { variables: variables, updateData })
 
@@ -60,7 +57,7 @@ const Players = () => {
         <ul className="flex flex-col">
           <Loader
             source={players}
-            spinner={spinner}
+            spinner={more.spinner}
             loading={{ status: loading, color: 'white' }}
             component={(item, index) =>
               <Link href={redirect(item.id)} key={index}>
@@ -101,9 +98,9 @@ const Players = () => {
         </ul>
       </div>
 
-      {players?.length >= 3 && offset <= players?.length - 3 && !state.search && (
+      {players?.length >= 3 && more.offset <= players?.length - 3 && !state.search && (
         <div className="flex justify-center mt-1">
-          <button className="w-full bg-gradient-to-r from-blue-700 to-blue-500 shadow p-2 rounded text-white text-xs" onClick={() => setOffset(players.length)}>
+          <button className="w-full bg-gradient-to-r from-blue-700 to-blue-500 shadow p-2 rounded text-white text-xs" onClick={() => setMore({ offset: players.length, spinner: false })}>
             Carregar mais
           </button>
         </div>
