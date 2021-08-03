@@ -9,7 +9,7 @@ const Loader = ({ source, loading, component, blank, template, map = true, spinn
 
   if (loading?.status) {
     if (spinner)
-      return <Loading color={loading?.color || 'blue-700'} />
+      return <Loading color={loading.color} />
   }
 
   if (source === undefined)
