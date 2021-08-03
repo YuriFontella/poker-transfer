@@ -21,8 +21,11 @@ import Empty from "@/src/components/helpers/empty"
 const Players = () => {
 
   const [offset, setOffset] = useState(0)
+  const [spinner, setSpinner] = useState(true)
 
   const updateData = (prevData, nextData) => {
+    setSpinner(false)
+
     if (state.search) {
       return { players: [...nextData.players] }
     }
@@ -57,6 +60,7 @@ const Players = () => {
         <ul className="flex flex-col">
           <Loader
             source={players}
+            spinner={spinner}
             loading={{ status: loading, color: 'white' }}
             component={(item, index) =>
               <Link href={redirect(item.id)} key={index}>
